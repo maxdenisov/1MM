@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/orderForm.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"
+    ></script>
+    <script type="module" src="/formOrder.js"></script>
+    <title>Order</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3>1MM</h3>
+      <form class="form" name='mainForm'>
+        <span id="mainContent">
+          <label for="firstSelect" class="form-label">You pay</label>
+          <div class="row row-cols-2">
+            <div class="col">
+              <select class="form-select myInput" id="firstSelect" name='firstCoin'>
+                <option value="WETH">WETH</option>
+                <option value="DAI">DAI</option>
+              </select>
+            </div>
+            <div class="col">
+              <input
+                type="number"
+                class="form-control myInput"
+                placeholder="0.0"
+                name="firstAmount"
+              />
+            </div>
+          </div>
+
+          <label for="secondSelect" class="form-label">You receive</label>
+          <div class="row row-cols-2">
+            <div class="col">
+              <select class="form-select myInput" id="secondSelect" name='secondCoin'>
+                <option value="WETH">WETH</option>
+                <option value="DAI">DAI</option>
+              </select>
+            </div>
+            <div class="col">
+              <input
+                type="number"
+                class="form-control myInput"
+                name="limitPrice"
+                placeholder="Limit price"
+              />
+            </div>
+          </div>
+
+          <div class="row buttonsRow">
+            <div class="col-sm">
+              <input
+                type="number"
+                class="form-control myInput"
+                name='expiresIn'
+                placeholder="Expires in (days)"
+              />
+            </div>
+            <div class="col-sm">
+              <input
+                type="number"
+                placeholder="Stop price"
+                name='stopPrice'
+                class="btn-danger form-control"
+              />
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary buttonConnect"
+          >
+            Trade
+          </button>
+        </span>
+        <span id="connectionContent">
+          <button
+            onclick="connectWallet()"
+            type="button"
+            class="btn btn-primary buttonConnect"
+          >
+            Connect wallet
+          </button>
+        </span>
+      </form>
+    </div>
+  </body>
+</html>

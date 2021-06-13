@@ -15,6 +15,10 @@ h3 {
   transform: translate(-50%, -50%);
 }
 
+#mainContent{
+  /* display: none; */
+}
+
 .form {
   max-width: 500px;
   margin: 0 auto;
