@@ -1,0 +1,60 @@
+body {
+  background-color: #ededf5;
+  font-family: "Baloo Tammudu 2", cursive;
+}
+h3 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px 50px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+}
+.form-label {
+  margin: 0;
+  margin-top: 10px;
+}
+.buttonsRow {
+  margin-top: 10px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.btn-danger {
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #fddad4;
+  color: #ff725d;
+  text-align: start;
+  border: none;
+}
+.buttonConnect {
+  padding: 10px 30px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: rgba(70, 104, 255, 0.534);
+  border: none;
+}
+.myInput {
+  background-color: #ededf5;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+}
+label {
+  display: inline-block;
+}
